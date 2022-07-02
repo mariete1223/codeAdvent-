@@ -100,10 +100,9 @@ function solveP2() {
             .sort((a,b) => b.depth - a.depth)
             .reduce(
                 (acc, curr) => {
-                    //console.log(acc)
+
                     acc*=5;
-                    acc+=scores[curr.value]
-                    //console.log(acc + "\n\n ")
+                    acc+=scores[curr.value]               
                     return acc;
                 },0
             ));
@@ -111,7 +110,7 @@ function solveP2() {
             
         }
     }
-console.log(result.length/2)
+
 console.log(result.sort((a,b) => b-a)[parseInt(result.length/2)])
 
 }
