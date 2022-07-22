@@ -92,11 +92,11 @@ function solveP2(){
     let input = readInput();
     let caves = getSmallCaves(input);
     let count = 0;
-
+    //we get the amount of paths exactly having the small cave twice
     for(let cave of caves){
         count+= getDifferentPaths("start",input,[],cave)
     }
-
+    //then we add it the amount of paths without repeating small caves
     count+=getDifferentPaths("start",input, []);
     console.log(count)
 }
